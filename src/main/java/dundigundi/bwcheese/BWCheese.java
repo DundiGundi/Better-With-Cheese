@@ -1,0 +1,36 @@
+package dundigundi.bwcheese;
+
+import net.fabricmc.api.ModInitializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import turniplabs.halplibe.HalpLibe;
+import turniplabs.halplibe.event.defs.CommonEvents;
+import turniplabs.halplibe.util.dependency.Key;
+
+public class BWCheese implements ModInitializer {
+	public static final String MOD_ID = HalpLibe.registerMod("bwcheese", true);
+	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
+	public static int startBlockID = 12000;
+	public static int startItemID = 31000;
+
+	@Override
+	public void onInitialize() {
+		//CommonEvents.BEFORE_GAME_START.listen(Key.of(MOD_ID), this::beforeGameStart);
+		//CommonEvents.AFTER_GAME_START.listen(Key.of(MOD_ID), this::afterGameStart);
+		LOGGER.info("Better With Cheese initialized.");
+		BWCheeseBlocks.RegisterBlocks();
+
+		LOGGER.info("Binding to events...");
+		//CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), () -> new BWCheeseRecipes().initNamespaces());
+		//CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), () -> new BWCheeseRecipes().onRecipesReady());
+	}
+
+	public void beforeGameStart() {
+
+	}
+
+	public void afterGameStart() {
+
+	}
+}

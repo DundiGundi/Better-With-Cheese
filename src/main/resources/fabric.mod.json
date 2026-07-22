@@ -1,26 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "bwcheese",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This mod aims to help new BTA modders.",
+	"name": "Better With Cheese",
+	"description": "This mod aims to add cheese to BTA",
 	"authors": [
-		"Turnip Labs"
+		"DundiGundi"
 	],
 	"contact": {
 		"homepage": "",
-		"sources": ""
+		"sources": "https://github.com/DundiGundi/Better-With-Cheese"
 	},
 	"icon": "icon.png",
 	"license": "CC0-1.0",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"turniplabs.examplemod.ExampleMod"
+			"dundigundi.bwcheese.BWCheese"
+		],
+		"client": [
+			"dundigundi.bwcheese.BWCheeseClient"
 		]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"bwcheese.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",

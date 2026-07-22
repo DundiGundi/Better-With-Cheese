@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cake/0",
+  "textures": {
+    "bottom": "bwcheese:block/cheese_block_side",
+    "side": "bwcheese:block/cheese_block_side",
+    "up": "bwcheese:block/cheese_block_side"
+  }
+}
